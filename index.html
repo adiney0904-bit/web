@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForgeLine - Ferretería Industrial Profesional</title>
+    
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="ForgeLine - Tu ferretería industrial de confianza. Herramientas profesionales, equipamiento industrial y servicio excepcional en Honduras.">
+    <meta name="keywords" content="ferretería, herramientas, industrial, Honduras, construcción, plomería, electricidad">
+    <meta name="author" content="ForgeLine">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ForgeLine - Ferretería Industrial Profesional">
+    <meta property="og:description" content="Tu ferretería industrial de confianza con las mejores herramientas y equipamiento profesional.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://forgeline.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="assets/images/hero-bg.jpg" as="image">
+</head>
+<body>
+    <!-- Navegación Principal -->
+    <nav class="main-navbar" id="mainNavbar">
+        <div class="navbar-content">
+            <div class="navbar-left">
+                <a href="#" id="logoLink" class="navbar-logo">
+                    <i class="fas fa-hammer"></i>
+                    <span>ForgeLine</span>
+                </a>
+                <ul class="navbar-nav">
+                    <li><a href="#inicio" class="navbar-link active">Inicio</a></li>
+                    <li><a href="#productos" class="navbar-link">Productos</a></li>
+                    <li><a href="#servicios" class="navbar-link">Servicios</a></li>
+                    <li><a href="#contacto" class="navbar-link">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="navbar-right">
+                <div class="navbar-actions">
+                    <button class="btn btn-outline btn-sm" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="btn btn-primary btn-sm" id="cartToggle">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="btn btn-secondary btn-sm" id="contactToggle">
+                        <i class="fas fa-headset"></i>
+                    </button>
+                </div>
+                <div class="navbar-social">
+                    <a href="https://wa.me/50495834797" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Buscador Flotante -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-modal">
+            <div class="search-header">
+                <h3>Buscar Productos</h3>
+                <button class="search-close" id="searchClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="search-container" id="searchForm">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Busca herramientas, equipos, materiales...">
+                </div>
+                <div class="search-suggestions" id="searchSuggestions"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contenedor Principal de Páginas -->
+    <main id="pageContainer">
+        <!-- Página de Inicio (Contenedor) -->
+        <div class="page active" id="page-inicio">
+            <!-- Header Principal -->
+            <header class="inicio-header">
+                    <div class="inicio-content">
+                    <h1 class="fade-in-up">ForgeLine</h1>
+                    <p class="fade-in-up section-subtitle">Tu ferretería industrial de confianza</p>
+                    <p class="fade-in-up">Calidad, innovación y servicio excepcional en cada herramienta</p>
+                    <div class="hero-actions fade-in-up">
+                        <a href="#productos" class="btn btn-primary btn-lg page-link" data-target="page-productos">
+                            <i class="fas fa-tools"></i>
+                            Explorar Productos
+                        </a>
+                        <a href="#contacto" class="btn btn-outline btn-lg page-link" data-target="page-contacto">
+                            <i class="fas fa-phone"></i>
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Indicadores de scroll -->
+                <div class="scroll-indicator">
+                    <div class="scroll-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Sección de Testimonios (Parte de Inicio) -->
+            <section class="section testimonials-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+                        <p class="section-subtitle">Experiencias reales de profesionales que confían en nosotros</p>
+                    </div>
+                    <div class="testimonials-slider" id="testimonialsSlider">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Excelente calidad en herramientas y un servicio al cliente excepcional. Siempre encuentro lo que necesito."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <h4>Carlos Mendoza</h4>
+                                    <span>Constructor Profesional</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"La mejor ferretería de la zona. Precios justos y productos de primera calidad."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <h4>María González</h4>
+                                    <span>Plomera</span>
+                    </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Entrega rápida y asesoría técnica profesional. Definitivamente mi ferretería de confianza."</p>
+                    </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                        </div>
+                                <div class="author-info">
+                                    <h4>Roberto Silva</h4>
+                                    <span>Electricista</span>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Galería de Instalaciones (Parte de Inicio) -->
+            <section class="section gallery-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Nuestras Instalaciones</h2>
+                        <p class="section-subtitle">Descubre nuestro espacio de trabajo, equipo y ambiente profesional</p>
+                    </div>
+                    <div class="gallery-grid" id="galleryGrid">
+                        <div class="gallery-item main-item" data-image="assets/images/Exterior.png" data-title="Fachada Principal" data-description="Vista exterior de nuestras modernas instalaciones">
+                            <img src="assets/images/Exterior.png" alt="Exterior de ForgeLine" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-content">
+                                    <h3>Fachada Principal</h3>
+                                    <p>Vista exterior de nuestras modernas instalaciones</p>
+                                    <button class="gallery-btn">
+                                        <i class="fas fa-expand"></i>
+                                        Ver más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/images/INTERIOR.png" data-title="Área de Ventas" data-description="Nuestro espacioso showroom con amplia variedad de productos">
+                            <img src="assets/images/INTERIOR.png" alt="Interior de ForgeLine" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-content">
+                                    <h3>Área de Ventas</h3>
+                                    <p>Showroom organizado</p>
+                                    <button class="gallery-btn">
+                                        <i class="fas fa-expand"></i>
+                                        Ver más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/images/trabajadores.png" data-title="Nuestro Equipo" data-description="Profesionales capacitados listos para asesorarte">
+                            <img src="assets/images/trabajadores.png" alt="Equipo de trabajo ForgeLine" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-content">
+                                    <h3>Nuestro Equipo</h3>
+                                    <p>Profesionales capacitados</p>
+                                    <button class="gallery-btn">
+                                        <i class="fas fa-expand"></i>
+                                        Ver más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/images/herramientas.mp4" data-title="Herramientas Premium" data-description="Amplia selección de herramientas de alta calidad" data-type="video">
+                            <video poster="assets/images/ferre.jpg" muted loop>
+                                <source src="assets/images/herramientas.mp4" type="video/mp4">
+                                Tu navegador no soporta videos HTML5.
+                            </video>
+                            <div class="gallery-overlay">
+                                <div class="gallery-content">
+                                    <h3>Herramientas Premium</h3>
+                                    <p>Selección de calidad</p>
+                                    <button class="gallery-btn">
+                                        <i class="fas fa-play"></i>
+                                        Reproducir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/images/Set de Herramientas Plomería.jpg" data-title="Departamento de Plomería" data-description="Todo lo que necesitas para proyectos de plomería">
+                            <img src="assets/images/Set de Herramientas Plomería.jpg" alt="Herramientas de plomería" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-content">
+                                    <h3>Plomería</h3>
+                                    <p>Herramientas especializadas</p>
+                                    <button class="gallery-btn">
+                                        <i class="fas fa-expand"></i>
+                                        Ver más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/images/Cemento.png" data-title="Materiales de Construcción" data-description="Cemento y materiales para toda obra de construcción">
+                            <img src="assets/images/Cemento.png" alt="Materiales de construcción" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-content">
+                                    <h3>Construcción</h3>
+                                    <p>Materiales de primera</p>
+                                    <button class="gallery-btn">
+                                        <i class="fas fa-expand"></i>
+                                        Ver más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mapa (Parte de Inicio) -->
+            <section class="map-section">
+                <div class="container">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps?q=14.969247222222,-88.027636111111&hl=es&z=16&output=embed&markers=14.969247222222,-88.027636111111" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0; border-radius: 1rem;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                                    </div>
+                                </div>
+            </section>
+        </div>
+
+        <!-- Sección de Estadísticas (Página Independiente) -->
+        <section class="stats-section page" id="page-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="stat-number" data-target="5000">0</div>
+                        <div class="stat-label">Productos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number" data-target="10000">0</div>
+                        <div class="stat-label">Clientes Satisfechos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Años de Experiencia</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="stat-number" data-target="24">0</div>
+                        <div class="stat-label">Horas de Entrega</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section featured-section page" id="page-productos">
+            <div class="container">
+                <div class="categories-container">
+                    <div class="section-header">
+                        <h2 class="section-title">Nuestras Categorías</h2>
+                        <p class="section-subtitle">Encuentra todo lo que necesitas organizado por categorías especializadas</p>
+                    </div>
+                    <div class="categorias-grid" id="categoriasGrid">
+                        <!-- Las categorías se cargarán dinámicamente -->
+                    </div>
+                </div>
+
+                <hr class="section-divider">
+
+                <div class="section-header">
+                    <h2 class="section-title">Productos Destacados</h2>
+                    <p class="section-subtitle">Las herramientas más populares y de mayor calidad</p>
+                </div>
+
+                <!-- Filtros y Ordenamiento -->
+                <form class="filters-bar" id="productFilterForm">
+                    <div class="filters-left">
+                        <select class="filter-select" id="categoryFilter" name="category">
+                            <option value="">Todas las Categorías</option>
+                        </select>
+                        <select class="filter-select" id="priceFilter" name="price">
+                            <option value="">Todos los Precios</option>
+                            <option value="0-1000">Menos de L.1,000</option>
+                            <option value="1000-5000">L.1,000 - L.5,000</option>
+                            <option value="5000-10000">L.5,000 - L.10,000</option>
+                            <option value="10000+">Más de L.10,000</option>
+                        </select>
+                        <select class="filter-select" id="sortFilter" name="sort">
+                            <option value="popular">Más Populares</option>
+                            <option value="price-asc">Precio: Menor a Mayor</option>
+                            <option value="price-desc">Precio: Mayor a Menor</option>
+                            <option value="name-asc">Nombre: A-Z</option>
+                            <option value="name-desc">Nombre: Z-A</option>
+                        </select>
+                    </div>
+                    <div class="filters-right">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-filter"></i>
+                            Aplicar Filtros
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Grid de Productos -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- Los productos se cargarán dinámicamente -->
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section class="section services-section page" id="page-servicios">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestros Servicios</h2>
+                    <p class="section-subtitle">Ofrecemos soluciones integrales para todas tus necesidades</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card page-link" data-target="page-productos">
+                        <div class="service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Entrega Rápida</h3>
+                        <p>Entrega en 24 horas para productos en stock en toda la región</p>
+                    </div>
+                    <div class="service-card page-link" data-target="page-contacto">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Asesoría Técnica</h3>
+                        <p>Expertos disponibles para guiarte en la selección de herramientas</p>
+                    </div>
+                    <div class="service-card" id="garantiaBtn">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Garantía Extendida</h3>
+                        <p>Todos nuestros productos cuentan con garantía oficial del fabricante</p>
+                    </div>
+                    <div class="service-card" id="supportChatCard">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Soporte 24/7</h3>
+                        <p>Atención al cliente disponible en todo momento</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section class="section contact-section page" id="page-contacto">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contáctanos</h2>
+                    <p class="section-subtitle">Estamos aquí para ayudarte con todas tus necesidades</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Ubicación</h4>
+                                <p>Peña Blanca, barrio al centro, calle principal, Cortés, Honduras</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Horario</h4>
+                                <p>Lunes a Sábado: 8:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Teléfono</h4>
+                                <p>+504 9583-4797</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>info@forgeline.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="contactName" name="name" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="contactEmail" name="email" placeholder="Tu email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="contactPhone" name="phone" placeholder="Tu teléfono">
+                                </div>
+                            <div class="form-group">
+                                <select id="contactSubject" name="subject" required>
+                                    <option value="">Selecciona un tema</option>
+                                    <option value="consulta">Consulta General</option>
+                                    <option value="cotizacion">Cotización</option>
+                                    <option value="soporte">Soporte Técnico</option>
+                                    <option value="reclamo">Reclamo</option>
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="contactMessage" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar Mensaje
+                                    </button>
+                                </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>ForgeLine</h3>
+                    <p>Tu ferretería industrial de confianza, comprometida con la excelencia y la innovación en el sector de herramientas y equipamiento industrial.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/50495834797" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Productos</h3>
+                    <ul>
+                        <li><a href="#productos">Herramientas Manuales</a></li>
+                        <li><a href="#productos">Herramientas Eléctricas</a></li>
+                        <li><a href="#productos">Plomería</a></li>
+                        <li><a href="#productos">Electricidad</a></li>
+                        <li><a href="#productos">Construcción</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#servicios">Asesoría Técnica</a></li>
+                        <li><a href="#servicios">Entrega Rápida</a></li>
+                        <li><a href="#servicios">Garantía</a></li>
+                        <li><a href="#servicios">Soporte 24/7</a></li>
+                        <li><a href="#servicios">Cotizaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#ubicacion">Ubicación</a></li>
+                        <li><a href="#horarios">Horarios</a></li>
+                        <li><a href="#politicas">Políticas</a></li>
+                        <li><a href="#terminos">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ForgeLine - Todos los derechos reservados por Andrea y Hector</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carrito Flotante -->
+    <div class="cart-widget" id="cartWidget">
+        <div class="cart-header">
+            <h3 class="cart-title">Tu Carrito</h3>
+            <span class="cart-count" id="cartWidgetCount">0</span>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <!-- Los items del carrito se cargarán aquí -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">L.0.00</span>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-outline btn-sm" id="clearCart">
+                    <i class="fas fa-trash"></i>
+                    Limpiar
+                </button>
+                <button class="btn btn-primary btn-sm" id="checkoutBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Comprar
+                </button>
+            </div>
+        </div>
+                </div>
+
+    <!-- Chat de Atención -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <h3>Asistente Virtual</h3>
+            <button class="chat-close" id="chatClose">
+                <i class="fas fa-times"></i>
+                    </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>¡Hola! Soy tu asistente virtual. ¿En qué puedo ayudarte hoy?</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+            <button id="chatSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Botón de Chat Flotante -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Modal de Producto -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalProductTitle">Nombre del Producto</h3>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-details">
+                    <div class="product-images">
+                        <img id="modalProductImage" src="" alt="Producto">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-price" id="modalProductPrice">L.0.00</div>
+                        <div class="product-description" id="modalProductDescription">
+                            Descripción del producto...
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" id="modalQuantityMinus">-</button>
+                                <input type="number" id="modalQuantity" value="1" min="1">
+                                <button class="quantity-btn" id="modalQuantityPlus">+</button>
+                            </div>
+                            <button class="btn btn-primary" id="modalAddToCart">
+                                <i class="fas fa-cart-plus"></i>
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Datos del Cliente para Factura -->
+    <div class="customer-modal" id="customerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Datos para la Factura</h3>
+                <button class="modal-close" id="customerModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="customerForm">
+                    <div class="form-group">
+                        <label for="customerName">Nombre completo</label>
+                        <input type="text" id="customerName" name="name" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerRtn">Número de RTN o ID</label>
+                        <input type="text" id="customerRtn" name="rtn" placeholder="Tu número de RTN o ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerAddress">Dirección de envío</label>
+                        <textarea id="customerAddress" name="address" placeholder="Tu dirección de envío" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Número de tarjeta</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="Número de tarjeta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardExpiry">Fecha de vencimiento (MM/AA)</label>
+                        <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/AA" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardCvv">CVV</label>
+                        <input type="text" id="cardCvv" name="cardCvv" placeholder="CVV" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-lock"></i>
+                        Pagar y Generar Factura
+                    </button>
+                </form>
+                <!-- Contenedor para mostrar la factura generada -->
+                <div id="factura" style="display:none; margin-top:32px;"></div>
+                <!-- El botón se agregará dinámicamente dentro del HTML de la factura -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Galería -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-modal-content">
+            <div class="gallery-modal-header">
+                <h3 id="galleryModalTitle">Título de la imagen</h3>
+                <button class="gallery-modal-close" id="galleryModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="gallery-modal-body">
+                <div class="gallery-modal-nav">
+                    <button class="gallery-nav-btn gallery-prev" id="galleryPrev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="gallery-nav-btn gallery-next" id="galleryNext">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="gallery-modal-media">
+                    <img id="galleryModalImage" src="" alt="" style="display: none;">
+                    <video id="galleryModalVideo" controls style="display: none;">
+                        <source src="" type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                </div>
+                <div class="gallery-modal-info">
+                    <div id="galleryModalDescription" class="gallery-description-content">
+                        Descripción de la imagen
+                    </div>
+                    <div class="gallery-counter">
+                        <span id="galleryCounter">1 de 6</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <!-- Scripts personalizados -->
+    <script src="js/scripts.js"></script>
+    <script src="js/carrito.js"></script>
+    <script>
+    // Descargar factura en PDF al enviar el formulario de datos del cliente y mostrarla en pantalla
+    document.addEventListener('DOMContentLoaded', function() {
+        const customerForm = document.getElementById('customerForm');
+        const facturaDiv = document.getElementById('factura');
+        const btnPdf = document.getElementById('btnPdf');
+        if (customerForm) {
+            customerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Obtener datos del cliente
+                const nombre = document.getElementById('customerName').value;
+                const rtn = document.getElementById('customerRtn').value;
+                const direccion = document.getElementById('customerAddress').value;
+                // Obtener datos de pago
+                const tarjeta = document.getElementById('cardNumber').value;
+                const vencimiento = document.getElementById('cardExpiry').value;
+                const cvv = document.getElementById('cardCvv').value;
+
+                // Obtener productos del carrito
+                let productos = [];
+                let subtotal = 0;
+                const cartContent = document.getElementById('cartContent');
+                if (cartContent) {
+                    const items = cartContent.querySelectorAll('.cart-item');
+                    items.forEach(item => {
+                        const nombreProd = item.querySelector('.cart-item-title')?.textContent || '';
+                        const cantidad = item.querySelector('.cart-item-quantity')?.textContent || '1';
+                        const precio = item.querySelector('.cart-item-price')?.textContent?.replace('L.', '').replace(',', '') || '0';
+                        const totalProd = item.querySelector('.cart-item-total')?.textContent?.replace('L.', '').replace(',', '') || precio;
+                        productos.push({ nombreProd, cantidad, precio, totalProd });
+                        subtotal += parseFloat(totalProd);
+                    });
+                }
+                // Si no hay productos, usar el total del carrito
+                if (productos.length === 0) {
+                    const total = document.getElementById('cartTotal').textContent.replace('L.', '').replace(',', '');
+                    subtotal = parseFloat(total) || 0;
+                    productos.push({ nombreProd: 'Producto', cantidad: '1', precio: total, totalProd: total });
+                }
+
+                // Calcular ISV y total
+                const isv = subtotal * 0.15;
+                const totalPagar = subtotal + isv;
+
+                // Generar número de factura y fecha
+                const facturaNum = Date.now();
+                const fecha = new Date();
+                const fechaStr = `${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()}`;
+
+                // Crear HTML profesional para el PDF y para mostrar en pantalla
+                let productosHtml = '';
+                productos.forEach(p => {
+                    productosHtml += `<tr>
+                        <td>${p.nombreProd}</td>
+                        <td style="text-align:center;">${p.cantidad}</td>
+                        <td style="text-align:right;">L.${parseFloat(p.precio).toFixed(2)}</td>
+                        <td style="text-align:right;">L.${parseFloat(p.totalProd).toFixed(2)}</td>
+                    </tr>`;
+                });
+
+                const facturaHtml = `
+<div style="font-family: 'Roboto', Arial, sans-serif; background: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 32px; max-width: 800px; margin: auto;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div>
+            <h2 style="color:#2356a0; margin-bottom: 0;">ForgeLine S. de R.L.</h2>
+            <div style="font-size: 14px; color: #444; margin-bottom: 8px;">Peña Blanca, barrio al centro, Cortés, Honduras<br>RTN: 0801-1234-567890<br>Tel: +504 9583-4797 | Email: info@forgeline.com</div>
+        </div>
+        <div style="text-align: right;">
+            <span style="color:#2356a0; font-weight: bold; font-size: 20px;">FACTURA</span><br>
+            <span style="font-size: 12px; color: #444;"># ${facturaNum}<br>Fecha: ${fechaStr}</span>
+        </div>
+    </div>
+    <hr style="border: 1px solid #2356a0; margin: 16px 0;">
+    <div style="background: #f1f5fb; border-radius: 6px; padding: 16px; margin-bottom: 24px;">
+        <strong style="color:#2356a0; font-size: 16px;">Datos del Cliente</strong><br>
+        <span><b>Nombre:</b> ${nombre}</span><br>
+        <span><b>RTN:</b> ${rtn}</span><br>
+        <span><b>Dirección:</b> ${direccion}</span>
+    </div>
+    <div style="background: #f1f5fb; border-radius: 6px; padding: 16px; margin-bottom: 24px;">
+        <strong style="color:#2356a0; font-size: 16px;">Datos de Pago</strong><br>
+        <span><b>Número de Tarjeta:</b> ${tarjeta}</span><br>
+        <span><b>Vencimiento:</b> ${vencimiento}</span><br>
+        <span><b>CVV:</b> ${cvv}</span>
+    </div>
+    <strong style="color:#2356a0; font-size: 16px;">Detalles de la Compra</strong>
+    <table style="width:100%; border-collapse: collapse; margin-top: 8px; font-size: 15px;">
+        <thead>
+            <tr style="background: #eaf1fb; color: #2356a0;">
+                <th style="padding: 8px; border: 1px solid #ddd;">Producto</th>
+                <th style="padding: 8px; border: 1px solid #ddd;">Cantidad</th>
+                <th style="padding: 8px; border: 1px solid #ddd;">Precio Unitario</th>
+                <th style="padding: 8px; border: 1px solid #ddd;">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${productosHtml}
+        </tbody>
+    </table>
+    <div style="text-align: right; margin-top: 12px; font-size: 16px;">
+        <div>Subtotal: L.${subtotal.toFixed(2)}</div>
+        <div>ISV (15%): L.${isv.toFixed(2)}</div>
+        <div style="font-weight: bold; color: #2356a0; font-size: 20px;">Total a Pagar: L.${totalPagar.toFixed(2)}</div>
+    </div>
+    <hr style="margin: 24px 0;">
+    <div style="font-size: 13px; color: #444; margin-bottom: 8px;"><b>Garantía:</b> Todos los productos cuentan con garantía de uso según las políticas de ForgeLine S. de R.L. Para más información, comuníquese con nuestro equipo de soporte.</div>
+    <div style="text-align: center; color: #2356a0; font-size: 15px; margin-top: 16px;">¡Gracias por su compra en ForgeLine! Su satisfacción es nuestra prioridad.</div>
+</div>
+<div style="text-align:center; margin-top:24px;">
+    <button id="btnPdf" class="btn btn-success" style="font-size:1.1rem; padding:10px 32px;">
+        <i class="fas fa-file-pdf"></i> Descargar PDF
+    </button>
+    <button id="btnPdfSolo" class="btn btn-danger" style="margin-top:12px; font-size:1.1rem; padding:10px 32px;">
+        <i class="fas fa-file-pdf"></i> Factura PDF
+    </button>
+</div>
+</div>
+                `;
+
+                // Mostrar la factura en pantalla y el botón de descarga
+                facturaDiv.innerHTML = facturaHtml;
+                facturaDiv.style.display = 'block';
+            });
+        }
+
+        // Descargar PDF manualmente con el botón
+        // Delegación de eventos para el botón PDF dentro de la factura generada
+        const facturaContainer = document.getElementById('factura');
+        if (facturaContainer) {
+            facturaContainer.addEventListener('click', function(e) {
+                const isBtnPdf = e.target && (e.target.id === 'btnPdf' || (e.target.closest && e.target.closest('#btnPdf')));
+                const isBtnPdfSolo = e.target && (e.target.id === 'btnPdfSolo' || (e.target.closest && e.target.closest('#btnPdfSolo')));
+                if (isBtnPdf || isBtnPdfSolo) {
+                    if (facturaContainer.innerHTML.trim() !== '') {
+                        html2pdf().set({
+                            margin: 0,
+                            filename: 'Factura_ForgeLine.pdf',
+                            image: { type: 'jpeg', quality: 0.98 },
+                            html2canvas: { scale: 2 },
+                            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                        }).from(facturaContainer).outputPdf('datauristring').then(function(pdfDataUri) {
+                            // Si es Factura PDF, subir al servidor y descargar desde HTTPS
+                            if (isBtnPdfSolo) {
+                                fetch('upload_pdf.php', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                                    body: 'pdf_data=' + encodeURIComponent(pdfDataUri) + '&filename=' + encodeURIComponent('Factura_ForgeLine_' + Date.now() + '.pdf')
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.success && data.url) {
+                                        // Descargar el PDF desde el enlace HTTPS
+                                        const a = document.createElement('a');
+                                        a.href = data.url;
+                                        a.download = 'Factura_ForgeLine.pdf';
+                                        document.body.appendChild(a);
+                                        a.click();
+                                        document.body.removeChild(a);
+                                    } else {
+                                        alert('Error al subir el PDF: ' + (data.message || 'Error desconocido'));
+                                    }
+                                })
+                                .catch(err => {
+                                    alert('Error de red al subir el PDF.');
+                                });
+                            } else {
+                                // Descargar PDF localmente (html2pdf)
+                                html2pdf().set({
+                                    margin: 0,
+                                    filename: 'Factura_ForgeLine.pdf',
+                                    image: { type: 'jpeg', quality: 0.98 },
+                                    html2canvas: { scale: 2 },
+                                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                                }).from(facturaContainer).save();
+                            }
+                        });
+                    } else {
+                        alert('Primero debe generar la factura.');
+                    }
+                }
+            });
+        }
+    });
+    </script>
+
+    <script>
+    // Recargar y hacer scroll al header al hacer clic en el logo
+    document.addEventListener('DOMContentLoaded', function() {
+        const logoLink = document.getElementById('logoLink');
+        if (logoLink) {
+            logoLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.hash = '';
+                window.location.reload();
+                setTimeout(function() {
+                    const header = document.querySelector('.inicio-header');
+                    if (header) {
+                        header.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 400);
+            });
+        }
+    });
+    </script>
+</body>
+</html>
